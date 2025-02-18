@@ -12,6 +12,7 @@ return {
     set("n", "<leader>ff", function()
       fzf.files({
         cwd = vim.fn.getcwd(),
+        hidden = true,
       })
     end, {
       desc = "󰈞 find files (cwd)",
@@ -44,7 +45,7 @@ return {
 
     -- Root context
     set("n", "<leader>Ff", function()
-      fzf.files({})
+      fzf.files({ hidden = true })
     end, {
       desc = "󰈞 find files (root)",
     })
@@ -68,5 +69,13 @@ return {
         cwd = dotfiles_path,
       })
     end, { desc = "  open dotfiles" })
+
+    fzf.setup({
+      keymap = {
+        fzf = {
+          ["ctrl-q"] = "select-all+accept",
+        },
+      },
+    })
   end,
 }
