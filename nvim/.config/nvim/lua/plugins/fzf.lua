@@ -50,6 +50,9 @@ return {
       desc = "󰈞 find files (root)",
     })
 
+    -- Helpers
+    set("n", "<leader>hc", "<cmd>cd %:h<cr>", { desc = "cd to directory of current buffer" })
+
     -- Quick edit keymaps for config
     local dotfiles_path = "~/dotfiles/"
     set("n", "<leader>en", function()
@@ -57,25 +60,28 @@ return {
         cwd = dotfiles_path .. "nvim/.config/nvim",
       })
     end, { desc = "  edit neovim config" })
-
     set("n", "<leader>ek", function()
       fzf.files({
         cwd = dotfiles_path .. "kitty/.config/kitty",
       })
     end, { desc = "  edit kitty config" })
-
     set("n", "<leader>ec", function()
       fzf.files({
         cwd = dotfiles_path,
       })
     end, { desc = "  open dotfiles" })
-
-    fzf.setup({
-      keymap = {
-        fzf = {
-          ["ctrl-q"] = "select-all+accept",
-        },
-      },
+    set("n", "<leader>ed", function()
+      fzf.files({
+        cwd = "~/mission_control/notes/",
+      })
+    end, {
+      desc = "󱨋 open notes",
     })
+
+    fzf.setup({ keymap = {
+      fzf = {
+        ["ctrl-q"] = "select-all+accept",
+      },
+    } })
   end,
 }
