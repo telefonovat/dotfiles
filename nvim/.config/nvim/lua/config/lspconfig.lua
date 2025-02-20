@@ -19,3 +19,4 @@ lspconfig.volar.setup({
     client.server_capabilities.documentRangeFormattingProvider = false
   end,
 })
+require("lspconfig").pylsp.setup({})
