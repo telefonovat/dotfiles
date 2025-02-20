@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:IBM Plex Mono 16
 
 # gaps config
-gaps inner 4
+gaps inner 6
 gaps outer 6
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
