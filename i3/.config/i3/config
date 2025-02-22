@@ -9,11 +9,12 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
+set $win Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
+ Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:IBM Plex Mono 16
+font pango:IBM Plex Mono 19
 
 # gaps config
 gaps inner 6
@@ -51,8 +52,10 @@ bindsym $mod+space exec rofi -show combi
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --image ~/dotfiles/i3/.config/i3/blue-black-girl.png
 
+# keybind to logout
+bindsym $win+l exec "i3lock --image ~/dotfiles/i3/.config/i3/blue-black-girl.png"
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
