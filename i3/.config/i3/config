@@ -52,7 +52,7 @@ bindsym $mod+space exec rofi -show combi
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --image ~/dotfiles/i3/.config/i3/blue-black-girl.png
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/dotfiles/i3/.config/i3/lock.sh
 
 # keybind to logout
 bindsym $win+l exec "i3lock --image ~/dotfiles/i3/.config/i3/blue-black-girl.png"
