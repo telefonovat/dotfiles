@@ -1178,7 +1178,7 @@ font_size 19.0
 
 #: The foreground and background colors.
 
-background_opacity 0.95
+background_opacity 0.91
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -2594,15 +2594,14 @@ map ctrl+shift+t new_tab_with_cwd
 
 
 # BEGIN_KITTY_FONTS
-# font_family      family='IBM Plex Mono' style=Medium features='+ss02 +ss01'
-# bold_font        family='IBM Plex Mono' style=Bold features='+ss02 +ss01'
-# italic_font      family='IBM Plex Mono' style='Light Italic' features='+ss02 +ss01'
-# bold_italic_font family='IBM Plex Mono' style='SemiBold Italic' features='+ss02 +ss01'
-font_family MesloLGS NF
+font_family      family='Fira Code' style=Retina
+bold_font        family='Fira Code' style=Bold
+italic_font      family='Fira Code' style=Light
+bold_italic_font auto
 # END_KITTY_FONTS
 
 
 # BEGIN_KITTY_THEME
-# Terafox
+# Nightfox
 include current-theme.conf
 # END_KITTY_THEME
