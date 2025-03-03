@@ -34,7 +34,7 @@ return {
     })
 
     -- Live grep
-    set("n", "<leader>fll", function()
+    set("n", "<leader>/", function()
       fzf.live_grep({
         cwd = vim.fn.getcwd(),
         hidden = true,
