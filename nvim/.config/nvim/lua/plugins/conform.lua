@@ -5,6 +5,8 @@ return {
       vue = { "prettierd" },
       javascript = { "prettierd" },
       typescript = { "prettierd" },
+      javascriptreact = { "prettierd" },
+      typescriptreact = { "prettierd" },
       css = { "prettierd" },
       json = { "prettierd" },
       yaml = { "prettierd" },
