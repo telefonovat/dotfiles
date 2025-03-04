@@ -69,11 +69,19 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
   if.app-id = 'org.mozilla.firefox'
-  run = 'move-node-to-workspace 3'
+  run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
   if.app-id = 'com.tinyspeck.slackmcgap'
-  run = 'move-node-to-workspace 1'
+  run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+  if.app-id = 'com.microsoft.outlook'
+  run = 'move-node-to-workspace C'
+
+[[on-window-detected]]
+  if.app-id = 'com.microsoft.teams2'
+  run = 'move-node-to-workspace T'
 [gaps]
     inner.horizontal = 10
     inner.vertical =   10
