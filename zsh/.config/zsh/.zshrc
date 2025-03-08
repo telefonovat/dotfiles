@@ -128,3 +128,9 @@ alias insomnia="exec i3-msg 'exec flatpak run rest.insomnia.Insomnia' &"
 export EDITOR="nvim"
 
 eval "$(zoxide init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh//.p10k.zsh.
+[[ ! -f ~/.config/zsh//.p10k.zsh ]] || source ~/.config/zsh//.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
