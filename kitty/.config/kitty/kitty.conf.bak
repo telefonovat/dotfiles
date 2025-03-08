@@ -1,3 +1,6 @@
+# Cursor trailing
+cursor_trail 3
+cursor_trail_decay 0.1 0.4
 # vim:fileencoding=utf-8:foldmethod=marker
 
 #: Fonts {{{
@@ -20,7 +23,7 @@
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-font_size 19.0
+font_size 17.0
 
 #: Font size (in pts).
 
@@ -2594,9 +2597,9 @@ map ctrl+shift+t new_tab_with_cwd
 
 
 # BEGIN_KITTY_FONTS
-font_family      family='Fira Code' style=Retina
-bold_font        family='Fira Code' style=Bold
-italic_font      family='Fira Code' style=Light
+font_family      family='Fira Code' style=SemiBold features='-cv10 -cv02 +ss05 +ss03 -cv16 -cv30 -cv29 +ss02 +ss08'
+bold_font        family='Fira Code' postscript_name=FiraCode-Bold
+italic_font      family='Fira Code' postscript_name=FiraCode-Light
 bold_italic_font auto
 # END_KITTY_FONTS
 
