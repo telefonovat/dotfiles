@@ -3,20 +3,18 @@ local mason = require("mason")
 
 mason.setup()
 
-lspconfig.volar.setup({
-  filetypes = { "vue" },
-  init_options = {
-    vue = {
-      hybridMode = false,
-    },
-    -- typescript = {
-    --   tsdk = "/usr/local/lib/node_modules/" .. "typescript/lib",
-    -- },
-  },
+lspconfig.volar.setup({})
 
-  on_attach = function(client)
-    client.server_capabilities.documentFormattingProvider = false -- disable formatting
-    client.server_capabilities.documentRangeFormattingProvider = false
-  end,
+lspconfig.ts_ls.setup({
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = vim.fn.stdpath("data") .. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+        languages = { "vue" },
+      },
+    },
+  },
 })
 require("lspconfig").pylsp.setup({})
