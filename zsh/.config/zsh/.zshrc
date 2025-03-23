@@ -121,8 +121,8 @@ setxkbmap us
 
 alias ls="lsd"
 alias cat="bat"
-alias telegram="exec i3-msg 'workspace 1;exec flatpak run org.telegram.desktop;workspace C' &"
 alias insomnia="exec i3-msg 'exec flatpak run rest.insomnia.Insomnia' &"
+alias anki="exec i3-msg 'workspace M; exec flatpak run net.ankiweb.Anki' & "
 
 
 export EDITOR="nvim"
