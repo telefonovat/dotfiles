@@ -170,6 +170,9 @@ set $ws-info I
 ## workspace for communication - telegram, email clients, etc
 set $ws-communication C
 
+## workspace for anki
+set $ws-anki M
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -185,6 +188,7 @@ bindsym $mod+0 workspace number $ws10
 bindsym $mod+u workspace $ws-utility
 bindsym $mod+i workspace $ws-info 
 bindsym $mod+c workspace $ws-communication
+bindsym $mod+m workspace $ws-anki
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -201,6 +205,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+u move container to workspace $ws-utility
 bindsym $mod+Shift+i move container to workspace $ws-info
 bindsym $mod+Shift+c move container to workspace $ws-communication
+bindsym $mod+Shift+m move container to workspace $ws-anki
 
 # reload the configuration file
 # bindsym $mod+Shift+c reload
