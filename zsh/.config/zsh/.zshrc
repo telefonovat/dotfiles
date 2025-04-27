@@ -126,6 +126,8 @@ alias insomnia="exec i3-msg 'exec flatpak run rest.insomnia.Insomnia' &"
 alias anki="exec i3-msg 'workspace M; exec flatpak run net.ankiweb.Anki' & "
 alias bruno="exec i3-msg 'exec flatpak run com.usebruno.Bruno' & "
 
+alias wipe="printf '\033[3J'"
+
 
 export EDITOR="nvim"
 
