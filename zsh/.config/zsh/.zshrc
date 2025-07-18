@@ -132,6 +132,7 @@ alias wipe="printf '\033[3J'"
 export EDITOR="nvim"
 
 eval "$(zoxide init zsh)"
+[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh//.p10k.zsh.
 [[ ! -f ~/.config/zsh//.p10k.zsh ]] || source ~/.config/zsh//.p10k.zsh
