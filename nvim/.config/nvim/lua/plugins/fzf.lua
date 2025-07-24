@@ -15,12 +15,12 @@ return {
         hidden = true,
       })
     end, {
-      desc = "󰈞 find files (cwd)",
+      desc = "find files (cwd)",
     })
     set("n", "<leader>fh", function()
       fzf.oldfiles()
     end, {
-      desc = "󰋚 reopen an old file",
+      desc = "reopen an old file",
     })
     set("n", "<leader>fc", function()
       fzf.blines()
@@ -40,7 +40,7 @@ return {
         hidden = true,
       })
     end, {
-      desc = "󰱼 live grep cwd",
+      desc = "󰱼 live grep current working directory",
     })
 
     -- Root context
