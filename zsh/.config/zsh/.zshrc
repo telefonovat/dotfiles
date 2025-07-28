@@ -94,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='nvim'
 # fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -113,17 +114,17 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Start up
-setxkbmap us
 
+# Customising common utilities with aliases
 
-# aliases
-
-alias ls="lsd"
 alias cat="bat"
-alias telegram="exec i3-msg 'workspace 1;exec flatpak run org.telegram.desktop;workspace C' &"
+alias ls="lsd"
+alias wipe="printf '\033[3J'"
 
+PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
 
-export EDITOR="nvim"
-
-eval "$(zoxide init zsh)"
+# Exports
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+val "$(zoxide init zsh)"

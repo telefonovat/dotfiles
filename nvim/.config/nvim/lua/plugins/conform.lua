@@ -8,10 +8,18 @@ return {
       javascriptreact = { "prettierd" },
       typescriptreact = { "prettierd" },
       css = { "prettierd" },
+      less = { "prettierd" },
       json = { "prettierd" },
       yaml = { "prettierd" },
       html = { "prettierd" },
       nginx = {},
+    },
+    formatters = {
+      prettier = {
+        prepend_args = function()
+          return { "--tab-width", "4" }
+        end,
+      },
     },
   },
 }

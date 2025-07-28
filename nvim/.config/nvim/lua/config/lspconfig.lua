@@ -3,6 +3,8 @@ local mason = require("mason")
 
 mason.setup()
 
+lspconfig.graphql.setup({})
+
 lspconfig.volar.setup({
   filetypes = { "vue" },
   init_options = {
