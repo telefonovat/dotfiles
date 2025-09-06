@@ -46,8 +46,20 @@ local vue_ls_config = {
     end
   end,
 }
--- nvim 0.11 or above
+
+local rust_analyzer_config = {
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = { allFeatures = true },
+      checkOnSave = {
+        command = "clippy",
+      },
+    },
+  },
+}
+
 vim.lsp.config("vtsls", vtsls_config)
 vim.lsp.config("vue_ls", vue_ls_config)
 vim.lsp.config("volar", { filetypes = {} })
-vim.lsp.enable({ "vtsls", "vue_ls", "volar" })
+vim.lsp.config("rust_analyzer", rust_analyzer_config)
+vim.lsp.enable({ "vtsls", "vue_ls", "volar", "rust_analyzer" })
