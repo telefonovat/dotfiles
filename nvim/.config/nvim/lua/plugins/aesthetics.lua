@@ -4,8 +4,11 @@ return {
     opts = {
       transparent = true,
       overrides = function(colors)
+        local bright_red = "#ff030f"
         return {
           ["@property"] = { fg = colors.cyan },
+          ["@variable"] = { fg = bright_red },
+          -- ["@tag.attribute"] = { fg = colors.cyan },
         }
       end,
     },
