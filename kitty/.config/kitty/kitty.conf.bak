@@ -1200,7 +1200,7 @@ enable_audio_bell no
 
 #: The foreground and background colors.
 
-background_opacity 0.92
+background_opacity 0.94
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -2616,7 +2616,7 @@ map ctrl+shift+t new_tab_with_cwd
 
 
 # BEGIN_KITTY_FONTS
-font_family      family='Monaspace Neon Frozen' style=Light
+font_family      family='JetBrains Mono' postscript_name=JetBrainsMono-Light
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -2624,6 +2624,6 @@ bold_italic_font auto
 
 
 # BEGIN_KITTY_THEME
-# Nightfox
+# Custom theme
 include current-theme.conf
 # END_KITTY_THEME
