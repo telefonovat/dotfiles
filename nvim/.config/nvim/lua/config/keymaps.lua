@@ -7,3 +7,7 @@ local set = vim.keymap.set
 set("n", "<leader>ic", function()
   print(vim.fn.getcwd())
 end, { desc = "Get current working directory" })
+
+set("n", "gr", function()
+  vim.lsp.buf.references()
+end, { desc = "references" })
