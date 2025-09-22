@@ -9,18 +9,15 @@ local vue_typescript_plugin = {
   configNamespace = "typescript",
 }
 
----@type vim.lsp.Config
-local based_pyright_config = {
+vim.lsp.config["basedpyright"] = {
   filetypes = { "python" },
 }
 
----@type vim.lsp.Config
-local ruff_config = {
+vim.lsp.config["ruff"] = {
   filetypes = { "python" },
 }
 
----@type vim.lsp.Config
-local vtsls_config = {
+vim.lsp.config["vtsls"] = {
   cmd = { "vtsls", "--stdio" },
   init_options = {
     hostInfo = "neovim",
@@ -37,15 +34,13 @@ local vtsls_config = {
   filetypes = tsserver_filetypes,
 }
 
----@type vim.lsp.Config
-local cssls_config = {
+vim.lsp.config["cssls"] = {
   filetypes = {
     "css",
   },
 }
 
----@type vim.lsp.Config
-local volar_config = {
+vim.lsp.config["volar"] = {
   root_markers = { "package.json" },
   on_init = function(client)
     client.handlers["tsserver/request"] = function(_, result, context)
@@ -87,13 +82,11 @@ local volar_config = {
   end,
 }
 
----@type vim.lsp.Config
-local json_lsp_config = {
+vim.lsp.config["jsonls"] = {
   filetypes = { "json" },
 }
 
----@type vim.lsp.Config
-local rust_analyzer_config = {
+vim.lsp.config["rust_analyzer"] = {
   settings = {
     ["rust-analyzer"] = {
       cargo = { allFeatures = true },
@@ -104,12 +97,12 @@ local rust_analyzer_config = {
   },
 }
 
-vim.lsp.config("rust_analyzer", rust_analyzer_config)
-vim.lsp.config("vtsls", vtsls_config)
-vim.lsp.config("volar", volar_config)
-vim.lsp.config("cssls", cssls_config)
-vim.lsp.config("jsonls", json_lsp_config)
-vim.lsp.config("basedpyright", based_pyright_config)
-vim.lsp.config("ruff", ruff_config)
-
-vim.lsp.enable({ "vtsls", "rust_analyzer", "cssls", "volar", "jsonls", "basedpyright", "ruff" })
+vim.lsp.enable({
+  "vtsls",
+  "rust_analyzer",
+  "cssls",
+  "volar",
+  "jsonls",
+  "basedpyright",
+  "ruff",
+})
