@@ -10,6 +10,16 @@ local vue_typescript_plugin = {
 }
 
 ---@type vim.lsp.Config
+local based_pyright_config = {
+  filetypes = { "python" },
+}
+
+---@type vim.lsp.Config
+local ruff_config = {
+  filetypes = { "python" },
+}
+
+---@type vim.lsp.Config
 local vtsls_config = {
   cmd = { "vtsls", "--stdio" },
   init_options = {
@@ -99,5 +109,7 @@ vim.lsp.config("vtsls", vtsls_config)
 vim.lsp.config("volar", volar_config)
 vim.lsp.config("cssls", cssls_config)
 vim.lsp.config("jsonls", json_lsp_config)
+vim.lsp.config("basedpyright", based_pyright_config)
+vim.lsp.config("ruff", ruff_config)
 
-vim.lsp.enable({ "vtsls", "rust_analyzer", "cssls", "volar", "jsonls" })
+vim.lsp.enable({ "vtsls", "rust_analyzer", "cssls", "volar", "jsonls", "basedpyright", "ruff" })
