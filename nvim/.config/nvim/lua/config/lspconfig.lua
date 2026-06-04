@@ -97,6 +97,14 @@ vim.lsp.config["rust_analyzer"] = {
   },
 }
 
+vim.lsp.config("clangd", {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+  },
+})
+
 vim.lsp.enable({
   "vtsls",
   "rust_analyzer",
@@ -105,4 +113,5 @@ vim.lsp.enable({
   "jsonls",
   "basedpyright",
   "ruff",
+  "clangd",
 })
